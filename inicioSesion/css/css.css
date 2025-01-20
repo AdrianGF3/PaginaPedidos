@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+.pedidosIMG{
+    background-image: url(../img/pexels-roman-odintsov-5902971.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;       
+}
+.portada{
+    background-image: url(../img/p6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+}
+
+.pedidosMain{
+    background-color: black;
+    opacity: 90%;
+    border-radius: 25px; 
+}
+.imagenPIZZA{
+    display: flex;
+    flex-wrap: wrap;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.ingredientes{
+    flex-wrap: wrap;
+    color:azure;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;   
+}
+
+.ingredientes ul{
+    font-size: 15px;
+}
+.errorIMG{
+    background-image: url(../img/404.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pizza{
+ 
+    margin: 100px;
+}
+.posst{   
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+::placeholder{
+    color: #ffffff;
+    opacity: 75%;
+    font-size: 15px;
+    font-weight: bold;
+}
+#opcionesFormulario{
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    width: 400px;
+}
+#cantidad{
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+    color: #ffffff;
+    margin-left: 20px;
+}
+#pedido{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.formulario{
+    display: flex;
+}
+.positionFormulario{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+#opcionesFormulario2{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    width: 400px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+#login h1{
+    font-size: 50px;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.salida{
+    margin: 100px; 
+    margin-top:-50px;   
+    text-decoration: none;
+    font-size: 30px;
+    color:#ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+}
+.salir{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; 
+    justify-content: center;
+}
+.salir :hover{
+    padding: 15px;
+}
+#titulo{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; 
+    justify-content: center; 
+    font-size: 75px;
+    color:#ffffff;
+    margin-bottom: 30px;
+}
+#titulo p{
+    text-align: center;
+    text-wrap: wrap;
+    margin-bottom: 100px;
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+}
