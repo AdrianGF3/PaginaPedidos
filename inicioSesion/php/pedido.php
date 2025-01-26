@@ -2,20 +2,27 @@
 <?php
 session_start();
 
-// Verificamos que se reciban los datos necesarios
-if (!isset($_REQUEST['nombre']) || !isset($_REQUEST['pedido']) || !isset($_REQUEST['cantidad'])) {
-    die("Faltan datos para procesar el pedido.");
+
+if (isset($_POST['cantidad'])) {
+
+    $productos = include '../php/productos.php';
+    
+
+    $ar = fopen("../pedidos.txt", "a") or die("Problemas en la creación del archivo.");
+
+
+    foreach ($_POST['cantidad'] as $idProducto => $cantidad) {
+        $producto = $productos[$idProducto];
+        
+        fputs($ar, "Producto: " . $producto['nombre'] . "\n");
+        fputs($ar, "Cantidad: " . $cantidad . "\n");
+        fputs($ar, "-------------------------------------------\n");
+    }
+
+    fclose($ar);
+
+    echo "El pedido se ha realizado correctamente.";
+} else {
+    echo "No se han recibido productos para pedir.";
 }
-
-$ar = fopen("pedido.txt", "a") or die("No se pudo crear el archivo");
-
-fputs($ar, "Nombre del cliente: " . $_REQUEST['nombre'] . "\n");
-fputs($ar, "Producto solicitado: " . $_REQUEST['pedido'] . "\n");
-fputs($ar, "Cantidad: " . $_REQUEST['cantidad'] . "\n");
-fputs($ar, "-------------------------------------------\n");
-
-fclose($ar);
-
-// Confirmación para el usuario
-echo "El pedido se guardó correctamente en pedido.txt.";
 ?>

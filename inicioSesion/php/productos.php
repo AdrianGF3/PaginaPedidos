@@ -1,7 +1,7 @@
 <?php 
     return [
         [
-            "id" => "pizza_margarita_1",
+            "id" => 0,
             "nombre" => "PIZZA MARGARITA", 
             "imagen" => "margarita.jpg", 
             "ingrediente1" => "220 g. de masa de pizza italiana",
@@ -13,7 +13,7 @@
             "ingrediente7" => "Aceite de oliva virgen extra",
         ],
         [
-            "id" => "pizza_barbacoa_1",
+            "id" => 1,
             "nombre" => "PIZZA BARBACOA", 
             "imagen" => "barbacoa.jpg",
             "ingrediente1" => "Carne picada 125g",
@@ -25,7 +25,7 @@
             "ingrediente7" => "Bacon picado en taquitos 80g",
         ],
         [
-            "id" => "pizza_margarita_2",
+            "id" => 2,
             "nombre" => "PIZZA MARGARITA", 
             "imagen" => "margarita.jpg", 
             "ingrediente1" => "220 g. de masa de pizza italiana",
@@ -37,7 +37,7 @@
             "ingrediente7" => "Aceite de oliva virgen extra",
         ],
         [
-            "id" => "pizza_barbacoa_2",
+            "id" => 3,
             "nombre" => "PIZZA BARBACOA", 
             "imagen" => "barbacoa.jpg",
             "ingrediente1" => "Carne picada 125g",
