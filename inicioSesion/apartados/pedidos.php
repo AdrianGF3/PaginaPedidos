@@ -20,16 +20,13 @@
         </div> 
 
         <section class="contenedor">
-            <from method="POST" class="posst">
+            <form method="POST" class="posst">
                 <?php
                     foreach ($productos as $producto) {
-                        
                         echo '<div class="pizza">';
-
                             echo '<img class="imagenPIZZA" src="../img/' . $producto['imagen'] . '" alt="' . $producto['nombre'] . '">';
-                                
-                            echo '<div class="ingredientes">';
 
+                            echo '<div class="ingredientes">';
                                 echo "<h1 class=titulo>" . $producto['nombre'] . "</h1>";
 
                                 echo '<ul>';
@@ -44,25 +41,21 @@
 
                                 echo '<div id="pedido">';
                                     echo '<b><p>Pedido:</p></b>';
-                                    echo '<label for=""><input type="number" placeholder="0" id="cantidad"></label>';
+                                    echo '<label for="cantidad_' . $producto['id'] . '">';
+                                    echo '<input type="number" placeholder="0" name="cantidad[' . $producto['id'] . ']" id="cantidad_' . $producto['id'] . '">';
+                                    echo '</label>';
                                 echo '</div>';
 
                             echo '</div>';
-
                         echo '</div>';
                     }
                 ?>
-            </from>
+                <div class="salir">
+                    <button type="submit" class="salida">Confirmar Pedido</button>
+                </div>
+            </form>
         </section>
         
-        <form action="../php/pedido.php" method="post">
-        
-            <div class="salir">
-                <a class="salida">Confirmar Pedido</a>
-            </div>
-
-        </from>
-                   
     </main>
     <footer>
         
