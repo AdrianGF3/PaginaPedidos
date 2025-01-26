@@ -1,22 +1,21 @@
-<?php
 
+<?php
 session_start();
 
-if()
+// Verificamos que se reciban los datos necesarios
+if (!isset($_REQUEST['nombre']) || !isset($_REQUEST['pedido']) || !isset($_REQUEST['cantidad'])) {
+    die("Faltan datos para procesar el pedido.");
+}
 
-$ar = fopen("datos.txt", "a") or
-die("Problemas en la creacion");
+$ar = fopen("pedido.txt", "a") or die("No se pudo crear el archivo");
 
-fputs($ar, $_REQUEST['nombre']);
-fputs($ar, "\n");
-fputs($ar, $_REQUEST['comentarios']);
-fputs($ar, "\n");
-fputs($ar,
-"-------------------------------------------");
-fputs($ar, "\n");
+fputs($ar, "Nombre del cliente: " . $_REQUEST['nombre'] . "\n");
+fputs($ar, "Producto solicitado: " . $_REQUEST['pedido'] . "\n");
+fputs($ar, "Cantidad: " . $_REQUEST['cantidad'] . "\n");
+fputs($ar, "-------------------------------------------\n");
+
 fclose($ar);
-echo "Los datos se cargaron correctamente.";
 
-
+// Confirmación para el usuario
+echo "El pedido se guardó correctamente en pedido.txt.";
 ?>
-
